@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	proxy := gateway.New()
+	proxy := gateway.New( /* gateway.Config{} */ )
 
 	proxy.BeforeJoin = func(string) {
 		fmt.Println("test")
