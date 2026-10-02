@@ -1,6 +1,12 @@
 package gateway
 
-func New() string {
+type Proxy struct {
+	test       string
+	BeforeJoin func(addr string)
+	OnJoin     func(string)
+}
+
+func New() *Proxy {
 	a := "test"
-	return a
+	return &Proxy{test: a}
 }

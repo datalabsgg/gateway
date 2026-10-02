@@ -1,12 +1,21 @@
 package main
 
-import "github.com/datalabsgg/gateway"
+import (
+	"fmt"
+
+	"github.com/datalabsgg/gateway"
+)
 
 func main() {
 	proxy := gateway.New()
 
-	proxy.beforeJoin =
-	proxy.onJoin =
+	proxy.BeforeJoin = func(string) {
+		fmt.Println("test")
+	}
 
-	proxy.Listen(":19132")
+	proxy.OnJoin = func(string) {
+		fmt.Println("test")
+	}
+
+	//proxy.Listen(":19132")
 }
