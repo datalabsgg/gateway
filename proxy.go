@@ -1,3 +1,6 @@
 package gateway
 
-func New() {}
+func New() string {
+	a := "test"
+	return a
+}
