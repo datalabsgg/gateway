@@ -1,9 +1,9 @@
 package gateway
 
 type Proxy struct {
-	test       string
-	BeforeJoin func(addr string)
-	OnJoin     func(string)
+	test        string
+	BeforeSpawn func(addr string)
+	OnSpawn     func(string)
 }
 
 func New() *Proxy {
